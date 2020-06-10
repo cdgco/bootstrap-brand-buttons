@@ -1,7 +1,7 @@
 ![Bootstrap Brand Buttons](http://i.imgur.com/5fl8HOF.png)
 
 ### Usage
- * Install: NPM Package Coming soon
+ * Install: npm i @cdgco/brand-buttons
  * Include `dist/brand-buttons.min.css` to your file: `<link rel="stylesheet" src="dist/brand-buttons.min.css">`
  * Use as Bootstrap button: `<button class="btn btn-facebook">Facebook</button>` or `<a href="" class="btn btn-facebook">Facebook</a>`
  * You can:
