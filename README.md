@@ -1,4 +1,4 @@
-![Bootstrap Brand Buttons](http://i.imgur.com/5fl8HOF.png)
+![Bootstrap Brand Buttons](https://raw.githubusercontent.com/cdgco/bootstrap-brand-buttons/gh-pages/BBB%20Banner.png)
 
 ### Usage
  * Install: npm i @cdgco/brand-buttons
