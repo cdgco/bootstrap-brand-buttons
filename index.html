@@ -2,21 +2,22 @@
 <html lang="en" ng-app="BBDocsApp">
   <head>
     <meta charset="UTF-8">
-    <title>Brand buttons for Bootstrap</title>
+    <title>Brand Buttons for Bootstrap</title>
     <link rel="stylesheet" href="https://rawgithub.com/twbs/bootstrap/master/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-brand-buttons@0.2.1/dist/brand-buttons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-brand-buttons@0.2.1/dist/brand-buttons-inversed.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cdgco/brand-buttons@1.0.2/dist/brand-buttons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cdgco/brand-buttons@1.0.2/dist/brand-buttons-inversed.min.css">
     <link href="styles/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9ce2a0b093.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="site-wrapper">
+    <div class="site-wrapper" style="height:100vh">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div class="inner cover">
+          <div class="inner cover row">
             <h1 class="cover-heading">
-              Brand buttons for Bootstrap
+              Brand Buttons for Bootstrap
             </h1>
+            <p style="font-size:8px;">&nbsp;</p>
             <div class="col-sm-6 col-md-3 btn-demo">
               <button class="btn btn-block btn-lg btn-bitcoin">
                 <i class="fa fa-bitcoin"></i> Bitcoin
@@ -37,14 +38,15 @@
                 <i class="fa fa-dribbble"></i> Dribbble
               </button>
             </div>
+            <p style="font-size:8px;">&nbsp;</p>
             <p class="lead">
-              <a href="#features" class="call-to-action">…and 82 others <i class="fa fa-angle-right"></i></a>
+              <a href="#buttons" id="scroll" class="call-to-action">…and 98 others <i class="fa fa-angle-right"></i></a>
             </p>
           </div>
           <div class="mastfoot">
             <div class="inner">
               <p>
-                <a href="#features" class="call-to-action">
+                <a href="#buttons" id="scroll" class="call-to-action">
                   <i class="fa fa-angle-down fa-5x"></i>
                 </a>
               </p>
@@ -54,65 +56,11 @@
       </div>
     </div>
 
-    <div class="container">
-      <section class="features" id="features">
-        <div class="row">
-          <div class="col-xs-6 col-sm-4 feature">
-            <div class="features-image">
-              <img src="images/sass.svg" alt="">
-            </div>
-            <h3><span class="hidden-xs">Written with</span> Sass</h3>
-          </div>
-          <div class="col-xs-6 col-sm-4 feature">
-            <div class="features-image">
-              <i class="fa fa-heart-o"></i>
-            </div>
-            <h3>86 items</h3>
-          </div>
-          <div class="col-xs-12 col-sm-4 feature">
-            <div class="features-image">
-              <div class="bootstrap-icon">B</div>
-            </div>
-            <h3>For Bootstrap</h3>
-          </div>
-        </div>
-      </section>
-
-      <section class="new">
-        <div class="page-header">
-          <h3>What's new <small>in 0.2</small></h3>
-        </div>
-
-        <div class="row text-center">
-          <div class="col-xs-6 col-sm-3">
-            <p>
-              <i class="fa fa-terminal fa-5x"></i>
-            </p>
-            <h3>New name</h3>
-          </div>
-          <div class="col-xs-6 col-sm-3">
-            <p>
-              <i class="fa fa-5x">+</i>
-            </p>
-            <h3>9 new buttons</h3>
-          </div>
-          <div class="col-xs-6 col-sm-3">
-            <p>
-              <i class="fa fa-star-half-o fa-5x"></i>
-            </p>
-            <h3>Inversed version</h3>
-          </div>
-          <div class="col-xs-6 col-sm-3">
-            <p>
-              <i class="fa fa-code fa-5x"></i>
-            </p>
-            <h3>Updated documentation</h3>
-          </div>
-        </div>
-      </section>
-
+    <div class="container" id="buttons">
+    <p style="font-size:8px;">&nbsp;</p>
       <section ng-controller="ListCtrl">
         <section ng-repeat="brand in brands">
+        <p style="font-size:8px;">&nbsp;</p>
           <div class="page-header">
             <h3>{{brand.name}}</h3>
           </div>
@@ -376,7 +324,7 @@
               <h3>Install and usage</h3>
             </div>
             <ul>
-              <li>Install: <code>npm install bootstrap-brand-buttons</code></li>
+              <li>Install: <code>npm i @cdgco/brand-buttons</code></li>
               <li>
                 Include <code>dist/brand-buttons.min.css</code> to your file: <code>&lt;link rel="stylesheet" src="dist/brand-buttons.min.css"&gt;</code>
               </li>
@@ -390,21 +338,13 @@
           </div>
           <div class="col-md-6">
             <div class="page-header">
-              <h3>Development version</h3>
+              <h3>Features</h3>
             </div>
             <ul>
-              <li>
-                Clone repository <code>git clone https://github.com/evgenyrodionov/bootstrap-brand-buttons.git</code>
-              </li>
-              <li>
-                Install Grunt.js and CoffeeScript (globally): <code>npm install -g grunt-cli coffee-script</code>
-              </li>
-              <li>
-                Go to project <code>cd BrandButtons</code>, install dev dependencies: <code>npm install</code>
-              </li>
-              <li>
-                Run <code>grunt serve</code> or <code>grunt build</code>
-              </li>
+              <li>102 Buttons</li>
+              <li>Built with SASS</li>
+              <li>Made for Bootstrap</li>
+              <li>Compatible with Font Awesome</li>
             </ul>
           </div>
         </div>
@@ -414,9 +354,9 @@
         <div class="row">
           <div class="col-xs-12">
             <hr>
-            <h3>Brand buttons by <a href="//erodionov.ru">Evgeny Rodionov</a>. Get on <a href="//github.com/evgenyrodionov/bootstrap-brand-buttons"><i class="fa fa-github"></i> GitHub</a>.</h3>
-            <h3>
-              <a href="https://gumroad.com/l/BrandButtons">Donate</a> or <a href="//github.com/evgenyrodionov/bootstrap-brand-buttons/issues">request new button</a>.</h3>
+            <h4>Bootstrap Brand Buttons by <a href="https://cdgtech.one">Carter Roeser</a>. Get on <a href="//github.com/evgenyrodionov/bootstrap-brand-buttons"><i class="fa fa-github"></i> GitHub</a>.</h4>
+            <h4>
+              <a href="https://paypal.me/cjrevents">Donate</a> or <a href="//github.com/cdgco/bootstrap-brand-buttons/issues">request new button</a>.</h4>
           </div>
         </div>
       </section>
@@ -426,5 +366,13 @@
     <script src="https://gumroad.com/js/gumroad.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/list.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $("#scroll").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#buttons").offset().top
+            }, 1500);
+        });  
+    </script>
   </body>
 </html>
