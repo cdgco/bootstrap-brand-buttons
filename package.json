@@ -1,33 +1,23 @@
 {
   "name": "bootstrap-brand-buttons",
-  "version": "1.0.1",
-  "homepage": "https://github.com/evgenyrodionov/bootstrap-brand-buttons",
-  "author": "Evgeny Rodionov <github@erodionov.ru> (http://erodionov.ru/)",
+  "version": "1.0.2",
+  "homepage": "https://github.com/cdgco/bootstrap-brand-buttons",
+  "author": "Carter Roeser <carter@cdgtech.one>",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://github.com/evgenyrodionov/BrandButtons.git"
+    "url": "http://github.com/cdgco/bootstrap-brand-buttons.git"
   },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "prepublish": "grunt build"
+    "prepare": "sass --no-source-map src/brand-buttons.scss:dist/brand-buttons.css src/brand-buttons-inversed.scss:dist/brand-buttons-inversed.css | sass --style=compressed --no-source-map src/brand-buttons.scss:dist/brand-buttons.min.css src/brand-buttons-inversed.scss:dist/brand-buttons-inversed.min.css"
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-concurrent": "~0.4.1",
-    "grunt-autoprefixer": "~0.4.0",
-    "grunt-contrib-watch": "~0.5.2",
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-notify": "",
-    "grunt-sass": "",
-    "grunt-newer": "~0.5.4",
-    "load-grunt-tasks": "~0.2.0",
-    "time-grunt": "~0.2.1",
-    "grunt-contrib-less": "^1.0.0"
+    "sass": ""
   },
   "engines": {
     "node": ">=0.8.0"

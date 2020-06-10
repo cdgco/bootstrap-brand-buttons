@@ -1,11 +1,11 @@
 {
   "name": "brandbuttons",
-  "version": "0.2.1",
-  "homepage": "https://github.com/evgenyrodionov/bootstrap-brand-buttons",
+  "version": "1.0.2",
+  "homepage": "https://github.com/cdgco/bootstrap-brand-buttons",
   "authors": [
-    "Evgeny Rodionov <github@erodionov.ru> (http://erodionov.ru/)"
+    "Carter Roeser <carter@cdgtech.one>"
   ],
-  "description": "Brand buttons for Bootstrap",
+  "description": "Brand Buttons for Bootstrap",
   "main": "dist/brand-buttons.min.css",
   "keywords": [
     "social",
