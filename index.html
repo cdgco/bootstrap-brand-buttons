@@ -1,378 +1,406 @@
-<!doctype html>
-<html lang="en" ng-app="BBDocsApp">
-  <head>
-    <meta charset="UTF-8">
-    <title>Brand Buttons for Bootstrap</title>
-    <link rel="stylesheet" href="https://rawgithub.com/twbs/bootstrap/master/dist/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Brand Buttons</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cdgco/brand-buttons@1.0.2/dist/brand-buttons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cdgco/brand-buttons@1.0.2/dist/brand-buttons-inversed.min.css">
-    <link href="styles/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9ce2a0b093.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="site-wrapper" style="height:100vh">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="inner cover row">
-            <h1 class="cover-heading">
-              Brand Buttons for Bootstrap
-            </h1>
-            <p style="font-size:8px;">&nbsp;</p>
-            <div class="col-sm-6 col-md-3 btn-demo">
-              <button class="btn btn-block btn-lg btn-bitcoin">
-                <i class="fa fa-bitcoin"></i> Bitcoin
-              </button>
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Brand Buttons</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#buttons">Buttons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#examples">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#font-awesome">Font Awesome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#installation">Installation</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-sm-6 col-md-3 btn-demo">
-              <button class="btn btn-block btn-lg btn-facebook">
-                <i class="fa fa-facebook"></i> Facebook
-              </button>
-            </div>
-            <div class="col-sm-6 col-md-3 btn-demo">
-              <button class="btn btn-block btn-lg btn-twitter">
-                <i class="fa fa-twitter"></i> Twitter
-              </button>
-            </div>
-            <div class="col-sm-6 col-md-3 btn-demo">
-              <button class="btn btn-block btn-lg btn-dribbble">
-                <i class="fa fa-dribbble"></i> Dribbble
-              </button>
-            </div>
-            <p style="font-size:8px;">&nbsp;</p>
-            <p class="lead">
-              <a href="#buttons" id="scroll" class="call-to-action">…and 98 others <i class="fa fa-angle-right"></i></a>
-            </p>
-          </div>
-          <div class="mastfoot">
-            <div class="inner">
-              <p>
-                <a href="#buttons" id="scroll" class="call-to-action">
-                  <i class="fa fa-angle-down fa-5x"></i>
-                </a>
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="container" id="buttons">
-    <p style="font-size:8px;">&nbsp;</p>
-      <section ng-controller="ListCtrl">
-        <section ng-repeat="brand in brands">
-        <p style="font-size:8px;">&nbsp;</p>
-          <div class="page-header">
-            <h3>{{brand.name}}</h3>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-6 col-md-3 btn-demo" ng-repeat="btn in brand.list">
-              <button class="btn btn-block btn-lg btn-{{btn}}">
-                {{btn}}
-              </button>
+    <header class="bg-primary text-white" style="height:100vh;">
+        <div style="display:flex;justify-content:center;align-items:center;height:100%">
+            <div class="container text-center">
+                <h1>Brand Buttons for Bootstrap</h1><br>
+                <div class="row">
+                    <p style="font-size:8px;">&nbsp;</p>
+                    <div class="col-sm">
+                        <button class="btn btn-block btn-lg btn-bitcoin-inversed">
+                            <i class="fa fa-bitcoin"></i> Bitcoin
+                        </button>
+                    </div>
+                    <div class="col-sm">
+                        <button class="btn btn-block btn-lg btn-facebook-inversed">
+                            <i class="fa fa-facebook"></i> Facebook
+                        </button>
+                    </div>
+                    <div class="col-sm">
+                        <button class="btn btn-block btn-lg btn-twitter-inversed">
+                            <i class="fa fa-twitter"></i> Twitter
+                        </button>
+                    </div>
+                    <div class="col-sm">
+                        <button class="btn btn-block btn-lg btn-dribbble-inversed">
+                            <i class="fa fa-dribbble"></i> Dribbble
+                        </button>
+                    </div>
+                </div>
+                <br>
+                <a href="#buttons" class="js-scroll-trigger lead" style="color:white;">... and 98 others</a>
             </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="uses">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="page-header">
-              <h3>Different sizes</h3>
-            </div>
-            <div class="table-responsive table-sizes">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="col-xs-2">Size</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>.btn-xs</td>
-                    <td>
-                      <button class="btn btn-xs btn-bitcoin">
-                        <i class="fa fa-bitcoin"></i> Bitcoin
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>.btn-sm</td>
-                    <td>
-                      <button class="btn btn-sm btn-bitcoin">
-                        <i class="fa fa-bitcoin"></i> Bitcoin
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>default</td>
-                    <td>
-                      <button class="btn btn-bitcoin">
-                        <i class="fa fa-bitcoin"></i> Bitcoin
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>.btn-lg</td>
-                    <td>
-                      <button class="btn btn-lg btn-bitcoin">
-                        <i class="fa fa-bitcoin"></i> Bitcoin
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>.btn-block</td>
-                    <td>
-                      <button class="btn btn-block btn-lg btn-bitcoin">
-                        <i class="fa fa-bitcoin"></i> Bitcoin
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="page-header">
-              <h3>Different uses</h3>
-            </div>
-            <div class="table-responsive table-sizes">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="col-xs-2">Use</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Only icon</td>
-                    <td>
-                      <button class="btn btn-xs btn-facebook">
-                        <i class="fa fa-facebook"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Plain</td>
-                    <td>
-                      <button class="btn btn-sm btn-facebook">
-                        Facebook
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>With icon</td>
-                    <td>
-                      <button class="btn btn-facebook">
-                        <i class="fa fa-facebook"></i> Facebook
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Any content</td>
-                    <td>
-                      <button class="btn btn-lg btn-facebook">
-                        <i class="fa fa-facebook"></i> Connect with Facebook <i class="fa fa-angle-right"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Inversed</td>
-                    <td>
-                      <button class="btn btn-lg btn-block btn-facebook-inversed">
-                        <i class="fa fa-facebook"></i> Connect with Facebook <i class="fa fa-angle-right"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
-      </section>
-
-      <section class="font-awesome">
-        <div class="page-header">
-          <h3>With Font Awesome</h3>
+        <div class="container text-center">
+            <a href="#buttons" class="js-scroll-trigger" style="color:white;">
+                <i class="fa fa-angle-down fa-5x"></i>
+            </a>
         </div>
-        <div class="row">
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-android">
-              <i class="fa fa-android"></i> Android
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-bitcoin">
-              <i class="fa fa-bitcoin"></i> Bitcoin
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-bitbucket">
-              <i class="fa fa-bitbucket"></i> Bitbucket
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-dribbble">
-              <i class="fa fa-dribbble"></i> Dribbble
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-dropbox">
-              <i class="fa fa-dropbox"></i> Dropbox
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-facebook">
-              <i class="fa fa-facebook"></i> Facebook
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-flickr">
-              <i class="fa fa-flickr"></i> Flickr
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-foursquare">
-              <i class="fa fa-foursquare"></i> Foursquare
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-googleplus">
-              <i class="fa fa-google-plus"></i> Google+
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-html5">
-              <i class="fa fa-html5"></i> HTML5
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-instagram">
-              <i class="fa fa-instagram"></i> Instagram
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-linkedin">
-              <i class="fa fa-linkedin"></i> LinkedIn
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-pinterest">
-              <i class="fa fa-pinterest"></i> Pinterest
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-rss">
-              <i class="fa fa-rss"></i> RSS
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-skype">
-              <i class="fa fa-skype"></i> Skype
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-stackoverflow">
-              <i class="fa fa-stack-overflow"></i> StackOverflow
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-tumblr">
-              <i class="fa fa-tumblr"></i> Tumblr
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-twitter">
-              <i class="fa fa-twitter"></i> Twitter
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-vk">
-              <i class="fa fa-vk"></i> VK
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-weibo">
-              <i class="fa fa-weibo"></i> Weibo
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-windows">
-              <i class="fa fa-windows"></i> Windows
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-xing">
-              <i class="fa fa-xing"></i> Xing
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 btn-demo">
-            <button class="btn btn-block btn-lg btn-youtube">
-              <i class="fa fa-youtube-play"></i> YouTube
-            </button>
-          </div>
-        </div>
-      </section>
+    </header>
 
-      <section class="install">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="page-header">
-              <h3>Install and usage</h3>
+    <section id="buttons">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <h2>Buttons</h2><br>
+                    <input class="form-control" id="searchBox" type="text" placeholder="Search...">
+                    <div id="button-grid" class="row">
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-37signals"> 37signals </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-android"> android </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-aol"> aol </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-amazon">amazon</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-appnet"> appnet </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-appstore"> appstore </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-baidu"> baidu </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-bitbucket"> bitbucket </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-bitcoin"> bitcoin </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-blogger"> blogger </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-box"> box </button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-cloudapp"> cloudapp </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-creativecommons"> creativecommons </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-csgo"> csgo </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-delicious"> delicious </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-digg"> digg </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-disqus"> disqus </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-docomo"> docomo </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-dota2"> dota2 </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-dribbble"> dribbble </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-dropbox"> dropbox </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-dwolla"> dwolla </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-eventbrite"> eventbrite </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-eventful"> eventful </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-evernote"> evernote </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-exact"> exact </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-facebook"> facebook </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-fitbit"> fitbit </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-flattr"> flattr </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-flickr"> flickr </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-foursquare"> foursquare </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-github"> github </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-gm"> gm </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-gmail"> gmail </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-google"> google </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-googleplay"> googleplay </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-googleplus"> googleplus </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-gowalla"> gowalla </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-grooveshark"> grooveshark </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-html5"> html5 </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-ie"> ie </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-instagram"> instagram </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-instapaper"> instapaper </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-intensedebate"> intensedebate </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-itunes"> itunes </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-klout"> klout </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-lanyrd"> lanyrd </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-lastfm"> lastfm </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-line"> line </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-linkedin"> linkedin </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-logmein"> logmein </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-lol"> lol </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-macstore"> macstore </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-meetup"> meetup </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-miicard"> miicard </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-minecraft"> minecraft </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-myspace"> myspace </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-ninetyninedesigns"> ninetyninedesigns </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-opentable"> opentable </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-paypal"> paypal </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-pinboard"> pinboard </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-pinterest"> pinterest </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-planningcenter"> planningcenter </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-plurk"> plurk </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-pocket"> pocket </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-podcast"> podcast </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-quake"> quake </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-quora"> quora </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-reddit"> reddit </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-renren"> renren </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-rss"> rss </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-salesforce"> salesforce </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-scribd"> scribd </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-shopify"> shopify </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-skype"> skype </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-smashing"> smashing </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-songkick"> songkick </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-soundcloud"> soundcloud </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-spotify"> spotify </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-stackoverflow"> stackoverflow </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-statusnet"> statusnet </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-steam"> steam </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-stripe"> stripe </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-stumbleupon"> stumbleupon </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-tf2"> tf2 </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-tumblr"> tumblr </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-twitter"> twitter </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-viadeo"> viadeo </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-vimeo"> vimeo </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-vk"> vk </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-weibo"> weibo </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-wikipedia"> wikipedia </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-windows"> windows </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-wordpress"> wordpress </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-wot"> wot </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-xing"> xing </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yahoo"> yahoo </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yammer"> yammer </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yandex"> yandex </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-ycombinator"> ycombinator </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yelp"> yelp </button> </div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-youtube"> youtube </button> </div>
+                    </div>
+                </div>
             </div>
-            <ul>
-              <li>Install: <code>npm i @cdgco/brand-buttons</code></li>
-              <li>
-                Include <code>dist/brand-buttons.min.css</code> to your file: <code>&lt;link rel="stylesheet" src="dist/brand-buttons.min.css"&gt;</code>
-              </li>
-              <li>
-                Use as Bootstrap button: <code>&lt;button class="btn btn-facebook"&gt;Facebook&lt;/button&gt;</code> or <code>&lt;a href="" class="btn btn-facebook">Facebook&lt;/a></code>
-              </li>
-              <li>
-                For inversed version you need include <code>brand-buttons-inversed.min.css</code> and use as <code>.btn-{brand}-inversed</code>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <div class="page-header">
-              <h3>Features</h3>
+        </div>
+    </section>
+
+    <section id="examples" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="page-header">
+                                <h3>Different Sizes</h3>
+                            </div>
+                            <div class="table-responsive table-sizes">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-xs-2">Size</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>.btn-xs</td>
+                                            <td><button class="btn btn-xs btn-bitcoin"><i class="fa fa-bitcoin"></i> Bitcoin</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>.btn-sm</td>
+                                            <td><button class="btn btn-sm btn-bitcoin"><i class="fa fa-bitcoin"></i> Bitcoin</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>default</td>
+                                            <td><button class="btn btn-bitcoin"><i class="fa fa-bitcoin"></i> Bitcoin</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>.btn-lg</td>
+                                            <td><button class="btn btn-lg btn-bitcoin"><i class="fa fa-bitcoin"></i> Bitcoin</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>.btn-block</td>
+                                            <td><button class="btn btn-block btn-lg btn-bitcoin"><i class="fa fa-bitcoin"></i> Bitcoin</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="page-header">
+                                <h3>Different Uses</h3>
+                            </div>
+                            <div class="table-responsive table-sizes">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-xs-2">Use</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Only icon</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-facebook">
+                                                    <i class="fa fa-facebook"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plain</td>
+                                            <td> <button class="btn btn-sm btn-facebook"> Facebook </button> </td>
+                                        </tr>
+                                        <tr>
+                                            <td>With icon</td>
+                                            <td><button class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook </button> </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Any content</td>
+                                            <td><button class="btn btn-lg btn-facebook"><i class="fa fa-facebook"></i> Connect with Facebook <i class="fa fa-angle-right"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inversed</td>
+                                            <td><button class="btn btn-lg btn-block btn-facebook-inversed"><i class="fa fa-facebook"></i> Connect with Facebook <i class="fa fa-angle-right"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul>
-              <li>102 Buttons</li>
-              <li>Built with SASS</li>
-              <li>Made for Bootstrap</li>
-              <li>Compatible with Font Awesome</li>
-            </ul>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section class="footer">
-        <div class="row">
-          <div class="col-xs-12">
-            <hr>
-            <h4>Bootstrap Brand Buttons by <a href="https://cdgtech.one">Carter Roeser</a>. Get on <a href="//github.com/evgenyrodionov/bootstrap-brand-buttons"><i class="fa fa-github"></i> GitHub</a>.</h4>
-            <h4>
-              <a href="https://paypal.me/cjrevents">Donate</a> or <a href="//github.com/cdgco/bootstrap-brand-buttons/issues">request new button</a>.</h4>
-          </div>
+    <section id="font-awesome">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <h2>Buttons with Font Awesome</h2>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-500px"><i class="fa fa-500px"></i> 500px</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-amazon"><i class="fa fa-amazon"></i> Amazon</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-android"><i class="fa fa-android"></i> Android</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-appstore"><i class="fab fa-app-store"></i> Appstore</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-bitbucket"><i class="fa fa-bitbucket"></i> Bitbucket</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-bitcoin"><i class="fa fa-bitcoin"></i> Bitcoin</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-blogger"><i class="fab fa-blogger"></i> Blogger</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-creativecommons"><i class="fa fa-creative-commons"></i> Creative Commons</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-delicious"><i class="fa fa-delicious"></i> Delicious</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-digg"><i class="fa fa-digg"></i> Digg</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-dribbble"><i class="fa fa-dribbble"></i> Dribbble</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-dropbox"><i class="fa fa-dropbox"></i> Dropbox</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-evernote"><i class="fab fa-evernote"></i> Evernote</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-facebook"><i class="fa fa-facebook"></i> Facebook</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-flickr"><i class="fa fa-flickr"></i> Flickr</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-foursquare"><i class="fa fa-foursquare"></i> Foursquare</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-github"><i class="fa fa-github"></i> GitHub</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-google"><i class="fa fa-google"></i> Google</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-googleplay"><i class="fab fa-google-play"></i> Google Play</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-googleplus"><i class="fa fa-google-plus"></i> Google+</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-html5"><i class="fa fa-html5"></i> HTML5</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-instagram"><i class="fa fa-instagram"></i> Instagram</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-ie"><i class="fa fa-internet-explorer"></i> Internet Explorer</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-itunes"><i class="fab fa-itunes-note"></i> iTunes</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-lastfm"><i class="fab fa-lastfm"></i> last.fm</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-line"><i class="fab fa-line"></i> Line</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-macstore"><i class="fa fa-apple"></i> Mac Store</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-meetup"><i class="fa fa-meetup"></i> Meetup</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-paypal"><i class="fa fa-paypal"></i> PayPal</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-pinterest"><i class="fa fa-pinterest"></i> Pinterest</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-podcast"><i class="fa fa-podcast"></i> Podcast</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-quora"><i class="fa fa-quora"></i> Quora</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-reddit"><i class="fa fa-reddit"></i> Reddit</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-renren"><i class="fa fa-renren"></i> Renren</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-rss"><i class="fa fa-rss"></i> RSS</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-salesforce"><i class="fab fa-salesforce"></i> Salesforce</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-scribd"><i class="fa fa-scribd"></i> Scribd</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-shopify"><i class="fab fa-shopify"></i> Shopify</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-skype"><i class="fa fa-skype"></i> Skype</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-soundcloud"><i class="fa fa-soundcloud"></i> SoundCloud</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-spotify"><i class="fa fa-spotify"></i> Spotify</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-stackoverflow"><i class="fa fa-stack-overflow"></i> StackOverflow</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-steam"><i class="fa fa-steam"></i> Steam</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-stripe"><i class="fab fa-stripe"></i> Stripe</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-stumbleupon"><i class="fa fa-stumbleupon"></i> SrumbleUpon</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-tumblr"><i class="fa fa-tumblr"></i> Tumblr</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-twitter"><i class="fa fa-twitter"></i> Twitter</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-viadeo"><i class="fa fa-viadeo"></i> Viadeo</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-vimeo"><i class="fa fa-vimeo"></i> Vimeo</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-vk"><i class="fa fa-vk"></i> VK</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-weibo"><i class="fa fa-weibo"></i> Weibo</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-wikipedia"><i class="fa fa-wikipedia-w"></i> Wikipedia</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-windows"><i class="fa fa-windows"></i> Windows</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-wordpress"><i class="fa fa-wordpress"></i> Wordpress</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-xing"><i class="fa fa-xing"></i> Xing</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yahoo"><i class="fa fa-yahoo"></i> Yahoo</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yammer"><i class="fab fa-yammer"></i> Yammer</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yandex"><i class="fab fa-yandex"></i> Yandex</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-ycombinator"><i class="fa fa-y-combinator"></i> Y Combinator</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-yelp"><i class="fa fa-yelp"></i> Yelp</button></div>
+                        <div class="col-sm-6 col-md-3 mt-4"> <button class="btn btn-block btn-lg btn-youtube"><i class="fa fa-youtube-play"></i> YouTube</button></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="https://gumroad.com/js/gumroad.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/list.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </section>
+    <section id="installation" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="page-header">
+                        <h3>Install and Usage</h3>
+                    </div>
+                    <ul>
+                        <li>Install: <code>npm i @cdgco/brand-buttons</code></li>
+                        <li>Include <code>dist/brand-buttons.min.css</code> to your file: <code>&lt;link rel="stylesheet" src="dist/brand-buttons.min.css"&gt;</code></li>
+                        <li>Use as Bootstrap button: <code>&lt;button class="btn btn-facebook"&gt;Facebook&lt;/button&gt;</code> or <code>&lt;a href="" class="btn btn-facebook"&gt;Facebook&lt;/a&gt;</code></li>
+                        <li>For inversed version you need include <code>brand-buttons-inversed.min.css</code> and use as <code>.btn-{brand}-inversed</code></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="page-header">
+                        <h3>Features</h3>
+                    </div>
+                    <ul>
+                        <li>102 Buttons</li>
+                        <li>Built with SASS</li>
+                        <li>Made for Bootstrap</li>
+                        <li>Compatible with Font Awesome</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">&copy; Copyright 2020 Carter Roeser. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
     <script>
-        $("#scroll").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#buttons").offset().top
-            }, 1500);
-        });  
+        $(document).ready(function() {
+            $("#searchBox").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#button-grid *").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
     </script>
-  </body>
+</body>
+
 </html>
